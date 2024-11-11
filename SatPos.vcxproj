@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Dev\C\LearnC++\SatPos\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Dev\C\LearnC++\SatPos\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Dev\C\LearnC++\SatPos\Libraries\include;C:\Dev\C\LearnC++\SatPos\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Dev\C\LearnC++\SatPos\Libraries\lib;C:\Dev\C\LearnC++\SatPos\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\lsimm\source\repos\SatPos\Libraries\include;C:\Dev\C\LearnC++\SatPos\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\lsimm\source\repos\SatPos\Libraries\lib;C:\Dev\C\LearnC++\SatPos\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Dev\C\LearnC++\SatPos\Libraries\include;C:\Users\lsimm\source\repos\SatPos\Libraries\include;C:\Dev\C\LearnC++\SatPos\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Dev\C\LearnC++\SatPos\Libraries\lib;C:\Users\lsimm\source\repos\SatPos\Libraries\lib;C:\Dev\C\LearnC++\SatPos\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Users\lsimm\source\repos\SatPos\Libraries\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
@@ -88,11 +88,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Dev\C\LearnC++\SatPos\Libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies);</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Dev\C\LearnC++\SatPos\Libraries\include\Curl;C:\Dev\C\LearnC++\SatPos\Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,11 +119,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Dev\C\LearnC++\SatPos\Libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies);opengl32.lib;glfw3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Dev\C\LearnC++\SatPos\Libraries\include\Curl;C:\Dev\C\LearnC++\SatPos\Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,6 +149,7 @@
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Requests.cpp" />
     <ClCompile Include="ShaderClass.cpp" />
     <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
@@ -155,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EBO.h" />
+    <ClInclude Include="Requests.h" />
     <ClInclude Include="ShaderClass.h" />
     <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
