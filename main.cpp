@@ -5,16 +5,17 @@
 #include "VAO.h"
 #include "VBO.h"
 #include "EBO.h"
-
-
-
+#include "Requests.h"
 
 
 //what this teaches me is EITHER i need to have shaders for every primary color (likely) or have dynamic shaders that can be modified on the fly
 
+
 int main() {
 
+	Requests squire;
 
+	std::cout << "Return data: " << squire.SatTLE("25544");
 
 	//create our vertex coordinates
 
@@ -70,6 +71,8 @@ int main() {
 	VBO VBO1(vertices, sizeof(vertices));
 	EBO EBO1(indices, sizeof(indices));
 
+	VBO VBO2(verticestwo, sizeof(verticestwo));
+
 	VAO1.LinkVBO(VBO1, 0);
 	VAO1.Unbind();
 	VBO1.Bind();
@@ -99,6 +102,7 @@ int main() {
 		VAO1.Bind();
 		//draw triangle using GL_TRIANGLES primitve
 		glDrawArrays(GL_TRIANGLES, 0, 3);
+
 
 		glfwSwapBuffers(mrScreen);
 
