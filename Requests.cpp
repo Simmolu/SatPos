@@ -67,7 +67,7 @@ string Requests::GeoAboveMe(string latitude, string longitude)
         "above/"
         + latitude + "/"
         + longitude
-        + "/90/10/"
+        + "/0/45/10/"
         + satAPIKey;
     
     curl_easy_setopt(carl, CURLOPT_URL, requestURL.c_str());
