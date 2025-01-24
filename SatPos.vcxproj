@@ -149,6 +149,7 @@
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Requests.cpp" />
     <ClCompile Include="ShaderClass.cpp" />
     <ClCompile Include="VAO.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EBO.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="Requests.h" />
     <ClInclude Include="ShaderClass.h" />
     <ClInclude Include="VAO.h" />

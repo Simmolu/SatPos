@@ -6,16 +6,25 @@
 #include "VBO.h"
 #include "EBO.h"
 #include "Requests.h"
+#include "Manager.h"
 
 
 //what this teaches me is EITHER i need to have shaders for every primary color (likely) or have dynamic shaders that can be modified on the fly
-
+//TODO: create "Renderer" class which contains all code neccesary to draw text to screen (just to start)
 
 int main() {
 
-	Requests squire;
 
-	std::cout << "Return data: " << squire.SatTLE("25544");
+	Requests squire;
+	string zip;
+	cout << "Please enter your zip code: \n";
+	cin >> zip;
+
+
+	Manager mrKrabs(zip);
+
+	mrKrabs.geoInfo(squire.GeoAboveMe(mrKrabs.latitude, mrKrabs.longitude));
+	mrKrabs.tleInfo(squire.SatTLE("25544"));
 
 	//create our vertex coordinates
 
